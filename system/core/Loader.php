@@ -289,6 +289,7 @@ class CI_Loader {
 				}
 
 				$CI->load->database($db_conn, FALSE, TRUE);
+//				var_dump($CI->load->database($db_conn, FALSE, TRUE));
 			}
 
 			if ( ! class_exists('CI_Model'))
@@ -301,6 +302,7 @@ class CI_Loader {
 			$model = ucfirst($model);
 
 			$CI->$name = new $model();
+			var_dump($CI->$name);
 
 			$this->_ci_models[] = $name;
 			return;
