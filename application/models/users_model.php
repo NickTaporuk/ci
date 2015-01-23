@@ -9,11 +9,33 @@ class Users_model extends CI_Model {
         $this->load->database();
 //        var_dump($this->load->database());
     }
+
+    /**
+     * @return mixed
+     */
     public function get_users(){
         $query = $this->db->get('users');
         return $query->result_array();
     }
-}
+    /**
+     * @return mixed
+     */
+    public function get_user($id){
+        $this->db->limit('1') ;
+        $this->db->order_by('id') ;
+        $query = $this->db->get('users');
+        return $query->result_array();
+    }
+    /**
+     * @return mixed
+     */
+    public function insert_user(array $user){
+        $this->db->insert('users',$user) ;
+        return true;
+    }
 
-/* End of file welcome.php */
-/* Location: ./application/controlalers/welcome.php */
+    public function edit_user(array $user) {
+
+    }
+
+}

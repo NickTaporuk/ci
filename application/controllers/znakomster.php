@@ -38,13 +38,22 @@ class Znakomster extends CI_Controller {
 //            var_dump($res);
 
 
-        $data = $this->load->model('users_model');
+//        $data = $this->load->model('users_model');
+        $this->load->model('users_model');
+        $data = [
+            'name'  => 'test1',
+            'email' => 'test1@test1.ru',
+            'passw' => md5('111'),
+            'last_tc'   => time(),
+            'activate'  => time(),
+        ];
+        $this->users_model->insert_user($data);
 //            var_dump($data);
 //        error_log('[DEBUG]:'.print_r($res),1,'nictaporuk@yandex.ru');
 
 //        error_log('[DEBUG]:'.print_r($res));
 
-        var_dump($this->users_model->get_users());
+//        var_dump($this->users_model->get_users());
         $this->load->view('znakomster/users_view');
     }
 
