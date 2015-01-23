@@ -47,7 +47,8 @@ class Znakomster extends CI_Controller {
             'last_tc'   => time(),
             'activate'  => time(),
         ];
-        $this->users_model->insert_user($data);
+//        $this->users_model->insert_user($data);
+        $this->users_model->edit_user($data);
 //            var_dump($data);
 //        error_log('[DEBUG]:'.print_r($res),1,'nictaporuk@yandex.ru');
 

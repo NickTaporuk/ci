@@ -51,7 +51,7 @@ class Users_model extends CI_Model
             }
 
         } catch (Exception $e) {
-            error_log(print_r([$user,$error]));
+            error_log($e->getMessage());
         }
 
     }
