@@ -23,10 +23,14 @@ class Users_model extends CI_Model
      */
     public function get_user($id)
     {
-        $this->db->limit('1');
-        $this->db->order_by('id');
-        $query = $this->db->get('users');
-        return $query->result_array();
+        try {
+            $this->db->limit('1');
+            $this->db->order_by('id');
+            $query = $this->db->get('users');
+            return $query->result_array();
+        } catch (Exception $e) {
+            error_log($e->getMessage());
+        }
     }
 
     /**
@@ -34,8 +38,12 @@ class Users_model extends CI_Model
      */
     public function insert_user(array $user)
     {
-        $this->db->insert('users', $user);
-        return true;
+        try {
+            $this->db->insert('users', $user);
+            return true;
+        } catch (Exception $e) {
+            error_log($e->getMessage());
+        }
     }
 
     public function edit_user(array $user)
@@ -46,7 +54,7 @@ class Users_model extends CI_Model
                 unset($user['id']);
                 $this->db->update('users', $user);
             } else {
-                $error  = 'No id in array IN FUNCTION :'.__FUNCTION__.' LINE :'.__LINE__;
+                $error = 'No id in array IN FUNCTION :' . __FUNCTION__ . ' LINE :' . __LINE__;
                 throw new Exception($error);
             }
 

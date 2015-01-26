@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <link rel="stylesheet" href="http://media.ibud.ua/css/common__ru0.css?v=3159838736" type="text/css"/>
-<link rel="stylesheet" href="http://media.ibud.ua/css/common__ru1.css?v=3159838736" type="text/css"/>
+    <link rel="stylesheet" href="http://media.ibud.ua/css/common__ru1.css?v=3159838736" type="text/css"/>
+    <link rel="stylesheet" href="/application/styles/tests.css" type="text/css"/>
 
     <title>ibud.ua: строительство и обустройство дома  | ibud.ua</title>
     <meta name="keywords" content="строительство, стройматериалы, обустройство дома"/>
@@ -20,7 +21,7 @@
 <meta property="og:site_name" content="ibud.ua" />
 <meta property="og:image" content="http://ibud.ua/images/ibud_logo_social.png" />
 
-        
+
     <script language="javascript" src="http://media.ibud.ua/js/common__ru.js?v=3159838736" type="text/javascript"></script>
     <!-- Piwik -->
 <script type="text/javascript">
@@ -55,7 +56,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script language="javascript" type="text/javascript" src="/ru/scr/counters/our_counter?page=%2F"></script><div id="brand">
     <script type="text/javascript" src="http://banners.ibud.ua//ru/scr/brand/get-brand/-2/0/57/2"></script>
 </div>
-
+<div class="button">
+    Start
+</div>
 <div class="banner">    <div rel="ibBanners='10|-2|0|57|2|0'" ></div>
 </div>
 
@@ -2553,5 +2556,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="text/javascript">
     vfImageLazyLoad();
 </script>
-</body>
+<script type="text/javascript">
+
+</script></body>
 </html>

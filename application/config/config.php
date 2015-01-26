@@ -45,6 +45,10 @@ $config['index_page'] = 'index.php';
 |
 */
 $config['uri_protocol']	= 'AUTO';
+//$config['uri_protocol']	= 'ORIG_PATH_INFO';
+//$config['uri_protocol']	= 'PATH_INFO';
+//$config['uri_protocol']	= 'QUERY_STRING';
+//$config['uri_protocol']	= 'REQUEST_URI';
 
 /*
 |--------------------------------------------------------------------------

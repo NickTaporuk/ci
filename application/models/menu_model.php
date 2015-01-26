@@ -15,6 +15,3 @@ class Menu_model extends CI_Model {
         return $query->result_array();
     }
 }
-
-/* End of file welcome.php */
-/* Location: ./application/controlalers/welcome.php */

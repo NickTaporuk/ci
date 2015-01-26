@@ -1,4 +1,21 @@
-RewriteEngine On
+#DirectoryIndex index.php
+#
+#<IfModule mod_rewrite.c>
+#RewriteEngine On
+#RewriteBase /
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ /index.php/$1 [L]
+#</IfModule>
+#
+#<IfModule !mod_rewrite.c>
+#ErrorDocument 404 /index.php
+#</IfModule>
+
+AddDefaultCharset utf-8
+RewriteEngine on
+RewriteBase /
+RewriteCond $1 !^(index\.php|favicon\.ico|css|js|themes|user_guide|content|files)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php/$1 [NC,L,QSA]
+RewriteRule . /index.php [L]
