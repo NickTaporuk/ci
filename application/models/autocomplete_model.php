@@ -15,6 +15,7 @@ class autocomplete_model extends CI_Model
     public function city_autocomplete()
     {
 //        $q = urldecode($_POST['term']);
+//        $q = $_POST['q'] = 'а';
         $q = $_POST['q'];
         $qr = 'SELECT name,id FROM city where name LIKE "'.$q.'%"';
         $query = $this->db->query($qr);
@@ -23,11 +24,11 @@ class autocomplete_model extends CI_Model
             $rows = $query->result_array();
             foreach ($rows as $row) {
                 //  $data[] = $row ;
-                /*$data[] =array(
+                $data[] =array(
                     'label'      => $row['name'],
                     'value'   => $row['name'],
-                );*/
-                $data[] = $row['name'];
+                );
+//                $data[] = $row['name'];
             }
         }
 //        var_dump($data);

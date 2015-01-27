@@ -302,7 +302,6 @@ class CI_Loader {
 			$model = ucfirst($model);
 
 			$CI->$name = new $model();
-			var_dump($CI->$name);
 
 			$this->_ci_models[] = $name;
 			return;

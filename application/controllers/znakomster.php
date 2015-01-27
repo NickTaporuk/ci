@@ -17,7 +17,6 @@ class Znakomster extends CI_Controller {
     }
 
     public function users() {
-
 //        $db     = mysqli_connect('localhost','root','root','localhost');
 //        $sql    = 'SELECT * FROM users';
 //        $result = mysqli_query($db,$sql);
@@ -64,10 +63,12 @@ class Znakomster extends CI_Controller {
 
     public function autocomplete() {
         $this->load->model('autocomplete_model');
-//        var_dump($this->autocomplete_model->city_autocomplete());
-        echo json_encode($this->autocomplete_model->city_autocomplete());
+        $arr = (array)$this->autocomplete_model->city_autocomplete();
+        /*foreach($this->autocomplete_model->city_autocomplete() as $v) {
+            $arr[] = $v;
+        }*/
+//        var_dump($arr);
+        flush();
+        echo json_encode($arr,JSON_UNESCAPED_UNICODE);
     }
 }
-
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */

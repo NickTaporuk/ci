@@ -64,9 +64,31 @@
                     },
 //                    dataType: "jsonp",
 
-                    success: function( data ) {
-                        console.log(data);
-                        response( data );
+                    success: function( data) {
+                        /*$.each(data, function(key, value){
+                            console.log(key + ":" + value)
+                        })*/
+                        console.log((data));
+                        var jsonObj = $.parseJSON('[' + data + ']');
+                        console.log((jsonObj));
+                        console.log('length :',jsonObj[0].length);
+//                        var myObject = eval('(' + data + ')');
+//                        var d = $.parseJSON(data);
+//                        console.log('d :',myObject);
+//                        var arr = [];
+                        /*for(var i=0;i<data.length;i++){
+//                            arr[i] = data[i];
+                            console.log(data.name[i]);
+                        }*/
+                        /*for (i in myObject)
+                        {
+                            alert(myObject[i]["name"]);
+                        }*/
+//                        console.log($.parseJSON('{"name":"John"}'));
+//                        console.log(data);
+//                        data = ["John"];
+//                        data = ["Аграрное","Агрономичное","Агрономия"];
+                        response( jsonObj[0] );
                     }
                 });
             }
