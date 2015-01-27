@@ -17,6 +17,7 @@ class Znakomster extends CI_Controller {
     }
 
     public function users() {
+
 //        $db     = mysqli_connect('localhost','root','root','localhost');
 //        $sql    = 'SELECT * FROM users';
 //        $result = mysqli_query($db,$sql);
@@ -39,25 +40,33 @@ class Znakomster extends CI_Controller {
 
 
 //        $data = $this->load->model('users_model');
-        $this->load->model('users_model');
-        $data = [
-            'name'  => 'test1',
-            'email' => 'test1@test1.ru',
-            'passw' => md5('111'),
-            'last_tc'   => time(),
-            'activate'  => time(),
-        ];
+//        $this->load->model('users_model');
+//        $data = [
+//            'name'  => 'test1',
+//            'email' => 'test1@test1.ru',
+//            'passw' => md5('111'),
+//            'last_tc'   => time(),
+//            'activate'  => time(),
+//        ];
+//        $this->load->model('users_model');
+
 //        $this->users_model->insert_user($data);
 //        $this->users_model->edit_user($data);
 //            var_dump($data);
 //        error_log('[DEBUG]:'.print_r($res),1,'nictaporuk@yandex.ru');
 
 //        error_log('[DEBUG]:'.print_r($res));
-
-//        var_dump($this->users_model->get_users());
+//        $this->load->model('autocomplete_model');
+//        var_dump($this->autocomplete_model->city_autocomplete());
+//        json_encode($this->autocomplete_model->city_autocomplete());
         $this->load->view('znakomster/users_view');
     }
 
+    public function autocomplete() {
+        $this->load->model('autocomplete_model');
+//        var_dump($this->autocomplete_model->city_autocomplete());
+        echo json_encode($this->autocomplete_model->city_autocomplete());
+    }
 }
 
 /* End of file welcome.php */
