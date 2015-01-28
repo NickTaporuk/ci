@@ -26,35 +26,8 @@
     <input id="autocomplete" title="type &quot;a&quot;">
 </div>
 <script>
-    $(document).ready(function() {
-        var availableTags = [
-            "ActionScript",
-            "AppleScript",
-            "Asp",
-            "BASIC",
-            "C",
-            "C++",
-            "Clojure",
-            "COBOL",
-            "ColdFusion",
-            "Erlang",
-            "Fortran",
-            "Groovy",
-            "Haskell",
-            "Java",
-            "JavaScript",
-            "Lisp",
-            "Perl",
-            "PHP",
-            "Python",
-            "Ruby",
-            "Scala",
-            "Scheme"
-        ];
         $( "#autocomplete" ).autocomplete({
-//            minLength: 2,
-//            source: availableTags
-//            source: '/index.php/znakomster/autocomplete'
+            minLength: 2,
             source: function( request, response ) {
                 $.ajax({
                     url: "/index.php/znakomster/autocomplete",
@@ -62,39 +35,13 @@
                     data: {
                         q: request.term
                     },
-//                    dataType: "jsonp",
-
-                    success: function( data) {
-                        /*$.each(data, function(key, value){
-                            console.log(key + ":" + value)
-                        })*/
-                        console.log((data));
-                        var jsonObj = $.parseJSON('[' + data + ']');
-                        console.log((jsonObj));
-                        console.log('length :',jsonObj[0].length);
-//                        var myObject = eval('(' + data + ')');
-//                        var d = $.parseJSON(data);
-//                        console.log('d :',myObject);
-//                        var arr = [];
-                        /*for(var i=0;i<data.length;i++){
-//                            arr[i] = data[i];
-                            console.log(data.name[i]);
-                        }*/
-                        /*for (i in myObject)
-                        {
-                            alert(myObject[i]["name"]);
-                        }*/
-//                        console.log($.parseJSON('{"name":"John"}'));
-//                        console.log(data);
-//                        data = ["John"];
-//                        data = ["Аграрное","Агрономичное","Агрономия"];
+                    success: function(o) {
+                        var jsonObj = $.parseJSON('[' + o + ']');
                         response( jsonObj[0] );
                     }
                 });
             }
         });
-    });
-
 </script>
 </body>
 </html>
