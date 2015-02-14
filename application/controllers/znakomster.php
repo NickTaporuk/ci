@@ -64,11 +64,7 @@ class Znakomster extends CI_Controller {
     public function autocomplete() {
         $this->load->model('autocomplete_model');
         $arr = (array)$this->autocomplete_model->city_autocomplete();
-        /*foreach($this->autocomplete_model->city_autocomplete() as $v) {
-            $arr[] = $v;
-        }*/
-//        var_dump($arr);
-        flush();
+
         echo json_encode($arr,JSON_UNESCAPED_UNICODE);
     }
 }

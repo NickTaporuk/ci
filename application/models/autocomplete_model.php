@@ -16,23 +16,26 @@ class autocomplete_model extends CI_Model
     {
 //        $q = urldecode($_POST['term']);
 //        $q = $_POST['q'] = 'а';
-        $q = $_POST['q'];
-        $qr = 'SELECT name,id FROM city where name LIKE "'.$q.'%"';
-        $query = $this->db->query($qr);
-        $data = array();
-        if ($query->num_rows() >= 1) {
-            $rows = $query->result_array();
-            foreach ($rows as $row) {
-                //  $data[] = $row ;
-                $data[] =array(
-                    'label'      => $row['name'],
-                    'value'   => $row['name'],
-                );
-//                $data[] = $row['name'];
-            }
-        }
-//        var_dump($data);
-        return $data;
+//        $q = ($_POST['q'])?$_POST['q']:false;
+        $q = ($_POST['ch'])?$_POST['ch']:false;
+//            if($q) {
+                $qr = 'SELECT name,id FROM city where name LIKE "'.$q.'%"';
+                $query = $this->db->query($qr);
+                $data = array();
+                if ($query->num_rows() >= 1) {
+                    $rows = $query->result_array();
+                    foreach ($rows as $row) {
+                        //  $data[] = $row ;
+                        $data[] =array(
+                            'label'      => $row['name'],
+                            'value'   => $row['name'],
+                        );
+                    }
+                }
+                return $data;
+//            } else {
+//                return [] ;
+//            }
 //        return $query->result_array();
     }
 }
