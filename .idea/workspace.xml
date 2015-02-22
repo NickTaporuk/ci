@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d030cd6-c68e-4645-b6c9-c4db31e2497c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/autocomplete/loadAutocomplete.js" afterPath="$PROJECT_DIR$/js/autocomplete/loadAutocomplete.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/znakomster/users_view.php" afterPath="$PROJECT_DIR$/application/views/znakomster/users_view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/znakomster/index.php" afterPath="$PROJECT_DIR$/application/views/znakomster/index.php" />
     </list>
     <ignored path="codeignitor.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,9 +82,21 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/znakomster/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7368421" vertical-offset="404" max-vertical-offset="46206">
-              <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
-              <folding />
+            <state vertical-scroll-proportion="0.8675136" vertical-offset="404" max-vertical-offset="46278">
+              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+              <folding>
+                <marker date="1424623382677" expanded="true" signature="934385:934417" placeholder="..." />
+                <marker date="1424623382677" expanded="true" signature="934439:934487" placeholder="..." />
+                <marker date="1424623382677" expanded="true" signature="934501:934591" placeholder="..." />
+                <marker date="1424623382677" expanded="true" signature="934612:934705" placeholder="..." />
+                <marker date="1424623382677" expanded="true" signature="934719:934737" placeholder="..." />
+                <marker date="1424623382677" expanded="true" signature="934795:934847" placeholder="..." />
+                <marker date="1424623382677" expanded="true" signature="934868:934882" placeholder="..." />
+                <marker date="1424623382677" expanded="true" signature="934917:934971" placeholder="..." />
+                <marker date="1424623382677" expanded="true" signature="934985:935013" placeholder="..." />
+                <marker date="1424623382677" expanded="true" signature="935051:935080" placeholder="..." />
+                <marker date="1424623382677" expanded="true" signature="935146:935236" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -158,7 +169,6 @@
         <option value="$PROJECT_DIR$/application/models/users_model.php" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/styles/tests.css" />
-        <option value="$PROJECT_DIR$/application/views/znakomster/index.php" />
         <option value="$PROJECT_DIR$/application/models/menu_model.php" />
         <option value="$PROJECT_DIR$/application/styles/tests.less" />
         <option value="$PROJECT_DIR$/application/.htaccess" />
@@ -169,6 +179,7 @@
         <option value="$PROJECT_DIR$/application/config/codeigniter.conf" />
         <option value="$PROJECT_DIR$/js/autocomplete/loadAutocomplete.js" />
         <option value="$PROJECT_DIR$/application/views/znakomster/users_view.php" />
+        <option value="$PROJECT_DIR$/application/views/znakomster/index.php" />
       </list>
     </option>
   </component>
@@ -823,9 +834,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/znakomster/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7368421" vertical-offset="404" max-vertical-offset="46206">
-          <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
-          <folding />
+        <state vertical-scroll-proportion="0.8675136" vertical-offset="404" max-vertical-offset="46278">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <marker date="1424623382677" expanded="true" signature="934385:934417" placeholder="..." />
+            <marker date="1424623382677" expanded="true" signature="934439:934487" placeholder="..." />
+            <marker date="1424623382677" expanded="true" signature="934501:934591" placeholder="..." />
+            <marker date="1424623382677" expanded="true" signature="934612:934705" placeholder="..." />
+            <marker date="1424623382677" expanded="true" signature="934719:934737" placeholder="..." />
+            <marker date="1424623382677" expanded="true" signature="934795:934847" placeholder="..." />
+            <marker date="1424623382677" expanded="true" signature="934868:934882" placeholder="..." />
+            <marker date="1424623382677" expanded="true" signature="934917:934971" placeholder="..." />
+            <marker date="1424623382677" expanded="true" signature="934985:935013" placeholder="..." />
+            <marker date="1424623382677" expanded="true" signature="935051:935080" placeholder="..." />
+            <marker date="1424623382677" expanded="true" signature="935146:935236" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
