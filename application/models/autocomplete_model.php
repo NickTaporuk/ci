@@ -12,14 +12,16 @@ class autocomplete_model extends CI_Model
     /**
      * @return mixed
      */
-    public function city_autocomplete()
+    public function city_autocomplete($limit=15)
     {
+//        var_dump($_POST);
+//        exit;
 //        $q = urldecode($_POST['term']);
 //        $q = $_POST['q'] = 'а';
 //        $q = ($_POST['q'])?$_POST['q']:false;
         $q = ($_POST['ch'])?$_POST['ch']:false;
 //            if($q) {
-                $qr = 'SELECT name,id FROM city where name LIKE "'.$q.'%"';
+                $qr = "SELECT name,id FROM city where name LIKE '$q%' LIMIT $limit";
                 $query = $this->db->query($qr);
                 $data = array();
                 if ($query->num_rows() >= 1) {
@@ -29,6 +31,7 @@ class autocomplete_model extends CI_Model
                         $data[] =array(
                             'label'      => $row['name'],
                             'value'   => $row['name'],
+                            'id'   => $row['id'],
                         );
                     }
                 }
