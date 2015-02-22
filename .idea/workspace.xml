@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d030cd6-c68e-4645-b6c9-c4db31e2497c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/znakomster/index.php" afterPath="$PROJECT_DIR$/application/views/znakomster/index.php" />
-    </list>
+    <list default="true" id="1d030cd6-c68e-4645-b6c9-c4db31e2497c" name="Default" comment="" />
     <ignored path="codeignitor.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
