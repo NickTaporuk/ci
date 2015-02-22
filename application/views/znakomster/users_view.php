@@ -253,6 +253,215 @@
 <!--        $('#messages').append($('<li>').text(mess));-->
 <!--    });*/-->
 <!--//</script>-->
+<style>
+html {
+min-width: 960px;
+height: 100%;
+font-size: 62.5%;
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+body{
+height: 100%;
+font-family: 'PF DinDisplay','Trebuchet MS',Arial;
+font-size: 16px;
+line-height: 20px;
+color: #333;
+background-color: #f2f2f2;
+}
+/*header menu*/
+#head-content{
+padding: 10px;
+background-color: #00316c;
+border-color: #002b66;
+background-image: -webkit-gradient(top,#003772,#002b66);
+background-image: -webkit-linear-gradient(top,#003772,#002b66);
+}
+.container label {
+line-height: 36px;
+color:#fff;
+}
+.container input {
+line-height: 28px;
+/*color:#fff;*/
+}
+#language{
+height: 35px;
+}
+/*header menu end*/
+#films #logo{
+float: left;
+/*background: #bebebe;*/
+color:#ffffff;
+padding: 10px 0;
+line-height: 20px;
+}
+
+#films .header-menu {
+float: left;
+position: relative;
+}
+.header{
+height: 3px;
+}
+#films .container{
+float: right;
+}
+#films .page{
+position: relative;
+padding: 50px 0 264px 0;
+width: 400px;;
+}
+#list {
+position: absolute;
+display: none;
+list-style-type:none;
+cursor: pointer;
+}
+
+#list:hover {
+display: block;
+}
+#list li{
+cursor: pointer;
+padding: 3px 4px;
+}
+#search {
+clear: both;
+top: 20px;
+position: relative;
+z-index: 9;
+}
+.full-search-click{
+background: cyan;
+width: 171px;
+padding: 5px;
+border-radius: 5px;
+}
+#search-full{
+display: none;
+}
+#search-full.active{
+display: block;
+}
+
+#mini-search{
+position:relative;
+}
+.result-mini-search{
+/*display: none;*/
+/*position: absolute;*/
+/*z-index: 10;*/
+height: 34px;
+float: left;
+}
+/*.actor{
+position: relative;
+}*/
+.result-actor{
+position: absolute;
+display: none ;
+z-index: 99;
+}
+.direct_by{
+position: relative;
+}
+.result-direct_by{
+position: absolute;
+display: none ;
+}
+/**/
+.producer{
+position: relative;
+}
+.result-producer{
+position: absolute;
+display: none ;
+}
+/**/
+.screenwriter{
+position: relative;
+}
+.result-screenwriter{
+position: absolute;
+display: none ;
+}
+/**/
+.operator{
+position: relative;
+}
+.result-operator{
+position: absolute;
+display: none ;
+}
+.slogan{
+position: relative;
+}
+.result-slogan{
+position: absolute;
+display: none ;
+}
+/**/
+.composer{
+position: relative;
+}
+.result-composer{
+position: absolute;
+display: none ;
+}
+.autocomplete-input{
+border: none;
+background: none;
+}
+.close-autocomplete{
+background: #3f7506;
+color: #ffffff;
+cursor: pointer;
+padding:0 3px;
+border-radius: 6px;
+margin-left: 3px;
+}
+.span-data {
+background: blue;
+border-radius: 3px;
+padding: 2px 6px;
+margin-left: 3px;
+color: #ffffff;
+text-decoration: none;
+}
+.span-data:hover {
+background: #ffffff;
+border-radius: 3px;
+padding: 2px 6px;
+margin-left: 3px;
+color: #000;
+text-decoration: none;
+}
+.span-data-close{
+float: left;
+text-decoration: none;
+}
+ul{
+text-decoration: none;
+list-style-type: none;
+}
+.mini-search-container{
+float: left;
+}
+.result-mini-search{
+border-radius: 0 20px 20px 0px;
+}
+/*menu*/
+.menu-films{
+line-height: 40px;
+margin-left: 110px;
+}
+.menu-films li {
+float:left;
+color: #fff;
+padding: 0 10px;
+}
+/*end menu*/
+</style>
 
 <div class="callback">
     <ul>
@@ -266,7 +475,7 @@
             defaultClass:'actor'
             ,url: "/znakomster/autocomplete"
             ,type:"POST"
-            ,layout:'<li ref="<<<Obj.id>>>"><<<Obj.value>>></li>'
+            //,layout:'<li ref="<<<Obj.id>>>"><<<Obj.value>>></li>'
 
 //            ,minChars:2
         });
