@@ -46,20 +46,12 @@
                 hiddenClass: 'autocomplete-hidden',
                 tabDisabled: false,
                 dataType: 'text',
-                //layout: '<li class="$1-close" ref="$2">$3<span class="close-autocomplete">x</span></li>',
                 layout:'<li class="<<<class>>>" ref="<<<Obj.id>>>"><<<Obj.value>>></li>',
                 currentRequest: null,
                 triggerSelectOnValidInput: true,
                 preventBadQueries: true,
                 debug: false,//доделать для отображения ошибок выполнения
                 insertInput: false,//вставлять в input а не как в fb сбоку
-                lookupFilter: function (suggestion, originalQuery, queryLowerCase) {
-                    return suggestion.value.toLowerCase().indexOf(queryLowerCase) !== -1;
-                },
-                paramName: 'query',
-                transformResult: function (response) {
-                    return typeof response === 'string' ? $.parseJSON(response) : response;
-                },
                 showNoSuggestionNotice: false,
                 noSuggestionNotice: 'No results',
                 orientation: 'bottom',
@@ -116,6 +108,7 @@
 
             $(document).on('click.container', '.' + el.config.defaultClass + '.' + el.config.defaultSpanClass, function (e) {
                 container.css({'display': 'none'});
+                el.el.val('');
                 if (el.config.insertInput) {
                     console.log(el.config.defaultClass)
                     //console.log(this);
@@ -138,11 +131,11 @@
                         }
                         //else
                     }
-                    console.log('flag:',flag);
+                    //console.log('flag:',flag);
                     data.push(ref);
                     //работает с ie9
                     data = el.unique(data);
-                    console.log('split:',data);
+                    //console.log('split:',data);
                     data.join(',');
                     //-----------------------------------
                     $('.' + options.defaultClass + '_hidden').val(data);
@@ -171,7 +164,7 @@
             });
             //==============================================================
             el.el.parent().on('click', function () {
-                el.el.focus();
+                el.el.focus();//всегда в фокусе инпут
             });
 
             el.el.on({
@@ -188,10 +181,16 @@
                     //el.onKeyDown(e,container);
                 },
                 'keyup.autocomplete': function (e) {
-                    //console.log('keyup:',$(this).val());
+                    console.log('keyup:',$(this).val());
+                    console.log('keyupData:',el.config.resultData);
+                    var html = '';
                     el.config.data.ch = $(this).val();
                     el.onKeyUp(e, container, $(this).val(), el);
-                    var html = el.compile(el.config.resultData, el);
+                    if(el.config.resultData.length){
+                        html = el.compile(el.config.resultData, el);
+                    }
+                    else html = '';
+                    console.log('html:',html);
                     container.html(html).css({'display': 'block'});
                 },
 
@@ -225,21 +224,26 @@
                 ,str = ''
                 ,tmpl = el.config.layout;
 
-            for (var i = 0; i < Obj.length; i++) {
+            if(Obj.length>0){
+                for (var i = 0; i < Obj.length; i++) {
 
-                if(Obj[i].link){
-                    //console.log('link:',Obj[i].link);
-                    str = tmpl.replace(/<<<Obj\.id>>>/g,Obj[i].id);
-                    str = str.replace(/<<<Obj\.value>>>/g,Obj[i].value);
-                    str = str.replace(/<<<class>>>/g,el.config.defaultClass+' '+el.config.defaultSpanClass);
-                    str = str.replace(/<<<link>>>/g,Obj[i].link);
-                } else {
-                    str = tmpl.replace(/<<<Obj\.id>>>/g,Obj[i].id);
-                    str = str.replace(/<<<Obj\.value>>>/g,Obj[i].value);
-                    str = str.replace(/<<<class>>>/g,el.config.defaultClass+' '+el.config.defaultSpanClass);
-                    //html += '<li class="' + el.config.defaultClass + ' ' + el.config.defaultSpanClass + '" ref="' + Obj[i].id + '">' + Obj[i].value + '</li>';
+                    if(Obj[i].link){
+                        //console.log('link:',Obj[i].link);
+                        str = tmpl.replace(/<<<Obj\.id>>>/g,Obj[i].id);
+                        str = str.replace(/<<<Obj\.value>>>/g,Obj[i].value);
+                        str = str.replace(/<<<class>>>/g,el.config.defaultClass+' '+el.config.defaultSpanClass);
+                        str = str.replace(/<<<link>>>/g,Obj[i].link);
+                    } else {
+                        str = tmpl.replace(/<<<Obj\.id>>>/g,Obj[i].id);
+                        str = str.replace(/<<<Obj\.value>>>/g,Obj[i].value);
+                        str = str.replace(/<<<class>>>/g,el.config.defaultClass+' '+el.config.defaultSpanClass);
+                        //html += '<li class="' + el.config.defaultClass + ' ' + el.config.defaultSpanClass + '" ref="' + Obj[i].id + '">' + Obj[i].value + '</li>';
+                    }
+                    html+=str;
                 }
-                html+=str;
+            }
+            else{
+                html = '<li></li>';
             }
 
             return html;
@@ -339,7 +343,6 @@
         },
         onKeyUp: function (e, container, value, el) {
             //console.log('onKeyUp:::::->',e);
-            //container.css('display','block');
             el.onAjax(e, el, value, container);
         },
         onKeyPress: function (e) {

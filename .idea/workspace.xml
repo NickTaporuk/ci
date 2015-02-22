@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/js/autocomplete/loadAutocomplete.js" line="123" mnemonic="1" />
+    <bookmark url="file://$PROJECT_DIR$/js/autocomplete/loadAutocomplete.js" line="245" mnemonic="3" />
+    <bookmark url="file://$PROJECT_DIR$/js/autocomplete/loadAutocomplete.js" line="314" mnemonic="5" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="1d030cd6-c68e-4645-b6c9-c4db31e2497c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/autocomplete/loadAutocomplete.js" afterPath="$PROJECT_DIR$/js/autocomplete/loadAutocomplete.js" />
@@ -63,8 +68,8 @@
       <file leaf-file-name="users_view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/znakomster/users_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.740741" vertical-offset="8197" max-vertical-offset="9054">
-              <caret line="473" column="21" selection-start-line="473" selection-start-column="21" selection-end-line="473" selection-end-column="21" />
+            <state vertical-scroll-proportion="-19.074074" vertical-offset="8449" max-vertical-offset="9072">
+              <caret line="498" column="7" selection-start-line="498" selection-start-column="7" selection-end-line="498" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -73,8 +78,8 @@
       <file leaf-file-name="loadAutocomplete.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/autocomplete/loadAutocomplete.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.56401384" vertical-offset="2194" max-vertical-offset="7326">
-              <caret line="140" column="35" selection-start-line="140" selection-start-column="35" selection-end-line="140" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.51903117" vertical-offset="3138" max-vertical-offset="7380">
+              <caret line="191" column="35" selection-start-line="191" selection-start-column="35" selection-end-line="191" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -839,16 +844,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/znakomster/users_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.740741" vertical-offset="8197" max-vertical-offset="9054">
-          <caret line="473" column="21" selection-start-line="473" selection-start-column="21" selection-end-line="473" selection-end-column="21" />
+        <state vertical-scroll-proportion="-19.074074" vertical-offset="8449" max-vertical-offset="9072">
+          <caret line="498" column="7" selection-start-line="498" selection-start-column="7" selection-end-line="498" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/autocomplete/loadAutocomplete.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56401384" vertical-offset="2194" max-vertical-offset="7326">
-          <caret line="140" column="35" selection-start-line="140" selection-start-column="35" selection-end-line="140" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.51903117" vertical-offset="3138" max-vertical-offset="7380">
+          <caret line="191" column="35" selection-start-line="191" selection-start-column="35" selection-end-line="191" selection-end-column="35" />
           <folding />
         </state>
       </provider>

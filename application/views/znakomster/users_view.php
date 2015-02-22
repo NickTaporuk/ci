@@ -173,6 +173,7 @@
         margin-left: 3px;
         color: #ffffff;
         text-decoration: none;
+        cursor: pointer;
     }
     .span-data:hover {
         background: #ffffff;
