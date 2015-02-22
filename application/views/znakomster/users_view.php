@@ -460,6 +460,19 @@ float:left;
 color: #fff;
 padding: 0 10px;
 }
+.callback{
+    border:1px solid #bebebe;
+    display: block;
+    width: 300px;
+}
+.callback ul input{
+    border: none;
+    background: none;
+}
+.callback ul input:focus{
+    border: none;
+    background: none;
+}
 /*end menu*/
 </style>
 
@@ -475,7 +488,7 @@ padding: 0 10px;
             defaultClass:'actor'
             ,url: "/znakomster/autocomplete"
             ,type:"POST"
-            //,layout:'<li ref="<<<Obj.id>>>"><<<Obj.value>>></li>'
+            ,layout:'<li class="<<<class>>>" ref="<<<Obj.id>>>"><<<Obj.value>>></li>'
 
 //            ,minChars:2
         });

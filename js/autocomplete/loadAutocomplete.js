@@ -125,30 +125,31 @@
                     var hiddenData = $(this),
                         li = $('.' + el.config.defaultClass + '.' + el.config.defaultSpanClass),
                         ref = hiddenData.attr('ref'),
-                        data = [];
-                    //el.config.hiddenData[ref]=ref;
-                    //-----------------------------------
-                    //взять в хидене сделать массив добавить
+                        data = [],
+                        flag = 0;
+
                     data = $('.' + options.defaultClass + '_hidden').val().split(',');
+
+                    for(var i = 0;i<data.length;i++){
+                        if(data[i] === ref) {
+                            flag = 1;
+                            console.log(111,' continue:', data[i],' ref:',ref);
+                            continue;
+                        }
+                        //else
+                    }
+                    console.log('flag:',flag);
                     data.push(ref);
-                    //console.log('split:',data);
+                    //работает с ie9
+                    data = el.unique(data);
+                    console.log('split:',data);
                     data.join(',');
                     //-----------------------------------
                     $('.' + options.defaultClass + '_hidden').val(data);
-                    hiddenData.parent().parent().prepend('<li class="' + el.config.defaultSpanClass + '-close" ref="' + ref + '">' + hiddenData.text() + '<span class="close-autocomplete">x</span></li>');
+                    if(flag === 0) hiddenData.parent().parent().prepend('<li class="' + el.config.defaultSpanClass + '-close" ref="' + ref + '">' + hiddenData.text() + '<span class="close-autocomplete">x</span></li>');
                 }
-                //console.log('el.config.hiddenData:',el.config.hiddenData);
-                //console.log('options.defaultClass:',options.defaultClass+'_hidden');
             });
-            //работа с контейнером визуализации искомых данных
-            /*container.on({
-             'click.container':function(){
-             //console.log('.'+el.config.defaultClass+'.'+el.config.defaultSpanClass);
-             //console.log(this);
-             var $this = $(this);
-             $this.css({'display':'none'});
-             }
-             });*/
+
             $(document).on('click', '.close-autocomplete', function () {
                 var close = $(this),
                     rel = close.parent().attr('ref');
@@ -243,7 +244,15 @@
 
             return html;
         },
-        str_replace: function (search, replace, subject) {
+    unique:function (arr) {
+        var obj = {};
+        for(var i=0; i<arr.length; i++) {
+            var str = arr[i];
+            obj[str] = true; // запомнить строку в виде свойства объекта
+        }
+        return Object.keys(obj); // или собрать ключи перебором для IE<9
+    },
+    str_replace: function (search, replace, subject) {
             return subject.replace(new RegExp(search, 'g'), replace);
         },
         render: function (template, params) {
