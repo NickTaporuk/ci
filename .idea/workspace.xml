@@ -6,10 +6,7 @@
     <bookmark url="file://$PROJECT_DIR$/js/autocomplete/loadAutocomplete.js" line="314" mnemonic="5" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d030cd6-c68e-4645-b6c9-c4db31e2497c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/autocomplete/loadAutocomplete.js" afterPath="$PROJECT_DIR$/js/autocomplete/loadAutocomplete.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/znakomster/users_view.php" afterPath="$PROJECT_DIR$/application/views/znakomster/users_view.php" />
-    </list>
+    <list default="true" id="1d030cd6-c68e-4645-b6c9-c4db31e2497c" name="Default" comment="" />
     <ignored path="codeignitor.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -319,7 +316,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../advanced" />
     <property name="dynamic.classpath" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
